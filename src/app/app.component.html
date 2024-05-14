@@ -1,0 +1,44 @@
+<div class="container">
+<h1>User Registration</h1>
+{{studentApplicationForm.value | json}}
+<form [formGroup]="studentApplicationForm">
+  <div class="form-group">
+    <label for="firstname">firstName</label>
+    <input formControlName="name" class="form-control" >
+    <!-- {{studentApplicationForm.value | json}} -->
+    {{studentApplicationForm.get('name')?.errors | json}}
+  </div>
+  <div class="form-group">
+    <label for="firstname">Age</label>
+    <input formControlName="age" class="form-control" >
+    <!-- {{studentApplicationForm.value | json}} -->
+    {{studentApplicationForm.get('age')?.errors | json}}
+  </div>
+  <pre></pre>
+</form>
+</div>
+<!-- 
+  <div class="form-group">
+    <label for="lastname">lastName</label>
+    <input required minlength="2"  maxlength="7" type="text" name="lastname" class="form-control" ngModel>
+  </div>
+  <pre></pre>
+
+  
+  <div class="form-group">
+    <label for="email">email</label>
+    <input type="text" name="email" class="form-control" ngModel>
+  </div>
+  <pre></pre>
+
+  <div class="form-group">
+    <label for="password">password</label>
+    <input type="text" name="password" class="form-control" ngModel>
+  </div>
+  <pre></pre>
+
+
+  <button class="btn btn-primary" type="submit">Submit</button>
+
+</form>
+</div> -->
